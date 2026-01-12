@@ -9,6 +9,8 @@ in one and two dimensions, with applications to nuclear engineering.
 
 We solve the neutron diffusion equation:
 
+$$\partial \phi/\partial t$$
+
 ∂φ/∂t = D ∂²φ/∂x² − Σₐ φ + S(x,t)
 
 using classical and modern numerical methods.
