@@ -1,23 +1,31 @@
 # Nuclear Diffusion Solver 
 
-Numerical Methods for solving 1D/2D neutron diffusion equation
+This project implements numerical methods to solve the neutron diffusion equation
+in one and two dimensions, with applications to nuclear engineering.
 
 ## MUTH Boravy
 
-## Day 1 - Project Setup ✅
+## Problem Statement
 
-Created project structure and initialized repository.
+We solve the neutron diffusion equation:
 
-## Roadmap
-- Week 1: 1D Classical Methods
-- Week 2: 2D Solvers & Optimization  
-- Week 3: Data Science Applications
-- Week 4: Polish & Deploy
-```
-Create `requirements.txt`:
-```
-numpy>=1.21.0
-scipy>=1.7.0
-matplotlib>=3.5.0
-pytest>=7.0.0
-jupyter>=1.0.0
+∂φ/∂t = D ∂²φ/∂x² − Σₐ φ + S(x,t)
+
+using classical and modern numerical methods.
+
+## Scope (Initial)
+
+- 1D diffusion equation
+- Finite Difference Method
+- Dirichlet boundary conditions
+- Comparison with analytical solutions
+
+## Long-Term Goals
+
+- 2D solvers to 3D solvers
+- Advanced numerical methods
+- Nuclear engineering relevance
+
+## Status
+
+- Project initialized. Numerical implementation in progress.
