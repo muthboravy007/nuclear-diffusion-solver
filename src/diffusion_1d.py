@@ -9,7 +9,7 @@ def solve_diffusion_1d(L=10.0, N=50, D=1.0, Sigma_a=0.1, S=1.0):
     dx = x[1] - x[0]
 
     A = np.zeros((N, N))
-    b = np.zeros(N)
+    b = np.zeros(N)*S
 
     # Interior nodes
     for i in range(1, N-1):
@@ -26,3 +26,17 @@ def solve_diffusion_1d(L=10.0, N=50, D=1.0, Sigma_a=0.1, S=1.0):
 
     phi = np.linalg.solve(A, b)
     return x, phi
+
+import matplotlib.pyplot as plt
+
+Ns = [20, 50, 100, 200]
+plt.figure()
+for N in Ns: 
+    x, phi = solve_diffusion_1d(N=N)
+    plt.plot(x, phi, label=f'N={N}')
+
+plt.xlabel('Position (cm)')
+plt.ylabel('Neutron Flux')  
+plt.title('1D Neutron Diffusion')
+plt.legend()
+plt.show()
